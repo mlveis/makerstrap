@@ -2,14 +2,19 @@
 * Logo
 */
 
+@logo-width-small: 157px;
+@logo-height-small: 46px;
+@logo-width-large: 225px;
+@logo-height-large: 66px;
+
 .webmaker-logo img {
   display: inline-block;
-  width: 157px;
-  height: 46px;
+  width: @logo-width-small;
+  height: @logo-height-small;
   @media (min-width: @screen-lg-min) {
     display: inline-block;
-    width: 225px;
-    height: 66px;	
+    width: @logo-width-large;
+    height: @logo-height-large;	
  }
 
 }
