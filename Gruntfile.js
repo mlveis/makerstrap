@@ -53,4 +53,17 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['less:development', 'shell:runServer', 'watch' ]);
   grunt.registerTask('build', ['less:build']);
 
+  compress: {
+  main: {
+    options: {
+      mode: 'gzip'
+    }
+    files: [
+      // Each of the files in the src/ folder will be output to
+      // the dist/ folder each with the extension .gz.js
+      {expand: true, src: ['src/*.js'], dest: 'dist/', ext: '.gz.js'}
+    ]
+  }
+}
+
 };
